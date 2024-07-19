@@ -1,4 +1,80 @@
+/* register fonts*/
+@font-face {
+    font-family: "Switzer";
+    src: url('/fonts/Switzer-Variable.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Switzer";
+    src: url('/fonts/Switzer-VariableItalic.ttf');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Zodiak";
+    src: url('/fonts/Zodiak-Variable.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Zodiak";
+    src: url('/fonts/Zodiak-VariableItalic.ttf');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Libertinage";
+    src: url('/fonts/Libertinage.ttf');
+    font-weight: normal;
+}
+:root {
+    --r-black: #040207;
+    --r-purple: #271e31;
+    --r-light-purple: #caaeed;
+    --r-lighter-purple: #eadefe;
+}
 html {
-    background-color: black;
+    background-color: var(--r-black);
     color: white;
+    font-size: 100%;
+    font-family: "Switzer"
+}
+
+body {
+    /*display: flex;
+    flex-direction: column;*/
+    font-family: "Libertinage";
+    font-weight: regular;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+body > p {
+    font-size: 125%;
+}
+
+.raevyn-logo {
+    font-size: 150%
+}
+
+nav {
+    border-bottom: 2px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+a {
+    font-weight: bold;
+    color: var(--r-light-purple);
 }
