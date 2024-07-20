@@ -5,7 +5,7 @@ const { frontmatter } = Astro.props;
 ---
 <html lang="en">
     <head>
-        <Headerjunk />
+        <Headerjunk title={frontmatter.title}/>
         <Navbar />
         <title>{frontmatter.title}</title>
     </head>
