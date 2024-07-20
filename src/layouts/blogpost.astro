@@ -1,0 +1,16 @@
+---
+import Headerjunk from "@components/headerjunk.astro";
+import Navbar from "@components/navbar.astro";
+const { frontmatter } = Astro.props;
+---
+<html lang="en">
+    <head>
+        <Headerjunk />
+        <Navbar />
+        <title>{frontmatter.title}</title>
+    </head>
+    <body>
+        <h1>{frontmatter.title}</h1>
+        <slot />
+    </body>
+</html>
