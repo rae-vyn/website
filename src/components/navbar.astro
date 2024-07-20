@@ -1,7 +1,9 @@
 ---
+import { Image } from "astro:assets";
+import raevynRef from "@images/Eldrae_TSPNT_raedient.png"
 ---
 <nav>
-    <img src="/Eldrae_TSPNT_raedient.png" width="5%" height="5%">
+    <Image src={raevynRef} alt="A skeletal raven." width={98.5} height={110.15}/>
     <p class="raevyn-logo">Raevyn's Site</p>
     <p>Hi!</p>
 </nav>
