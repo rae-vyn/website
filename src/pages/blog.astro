@@ -1,0 +1,20 @@
+---
+import Headerjunk from '@components/headerjunk.astro';
+import Navbar from '@components/navbar.astro';
+import Blogpost from '@components/blogpost.astro';
+import { getCollection } from 'astro:content';
+const allPosts = await getCollection("posts");
+---
+
+<html lang="en">
+	<head>
+		<Headerjunk />
+		<Navbar />
+		<title>Blog Posts</title>	
+	</head>
+	<body>
+        {
+            allPosts.map((post) => <Blogpost url={`/posts/${post.slug}`} title={post.data.title} date={post.data.pubDate.toISOString().slice(0,10)}/>)
+        }
+	</body>
+</html>

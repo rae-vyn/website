@@ -78,3 +78,25 @@ a {
     font-weight: bold;
     color: var(--r-light-purple);
 }
+
+figcaption {
+    font-style: italic;
+    color: var(--r-lighter-purple)
+}
+
+h2 {
+    margin-top: 5%;
+}
+
+.image-with-text {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+}
+
+@media screen and (max-width: 40rem) {
+    .image-with-text {
+        flex-direction: column; 
+        justify-content: center;
+    }
+}

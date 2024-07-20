@@ -1,0 +1,20 @@
+---
+const src: ImageMetadata = Astro.props.src;
+const alt: string = Astro.props.alt;
+const width: number = Astro.props.width;
+const height: number = Astro.props.height;
+const inferSize: boolean = Astro.props.inferSize;
+const captionText: string = Astro.props.captionText;
+
+import { Image } from "astro:assets";
+---
+<figure style="margin: 0%; padding: 8px;">
+    <Image 
+        src={src} 
+        alt={alt} 
+        width={width} 
+        height={height} 
+        inferSize={inferSize ? true : false }
+    />
+    <blockquote>{captionText}</blockquote>
+</figure>

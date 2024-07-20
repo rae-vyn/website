@@ -1,0 +1,21 @@
+---
+const src: ImageMetadata = Astro.props.src;
+const alt: string = Astro.props.alt;
+const width: number = Astro.props.width;
+const height: number = Astro.props.height;
+const inferSize: boolean = Astro.props.inferSize;
+
+import { Image } from "astro:assets";
+---
+<div class="image-with-text">
+    <Image 
+        src={src} 
+        alt={alt} 
+        width={width} 
+        height={height} 
+        inferSize={inferSize ? true : false }
+        style="padding: 8px; padding-right: 32px;"/>
+    <div style="display: flex; flex-direction: column; font-size: 125%">
+        <slot />
+    </div>
+</div>

@@ -5,8 +5,96 @@ description: "This is what I've learned playing Stevie Gull."
 tags: ["friendsvsfriends", "blogging", "learning in public"]
 ---
 
-import { Image } from "astro:assets";
+import ImageWithText  from "@components/imagewithtext.astro";
+import ImageWithCaption  from "@components/imagewithcaption.astro";
+import stevieImageRef from "@images/stevie_angry.png";
+import stevieCardRef from "@images/classic_card.png";
+import stevieZoomRef from "@images/stevie_angry_zoom.png"
 
 About two weeks ago, I bought the game [Friends vs. Friends](https://friendsvsfriends.com), which is really good.
 
 When I picked up the game, I bounced between a few different characters, but I've landed on one that I now main: Stevie Gull.
+
+<ImageWithText src={stevieImageRef} inferSize={true} alt="An anthropomorphic ringed gull with an ominous expression">
+    Stevie is definitely a high-tier, in my opinion. 
+    
+    While your milage mainly depends on how well you can use their weapon (more on that later),
+    they're a pretty reliable pick in any situation.
+</ImageWithText>
+
+This post is designed to be my understanding of how to play the character,
+but bear in mind that I'm not an expert or anything. There are a lot of better players in the
+[Fvf Discord Server](https://discord.com/invite/RH5qcunBc6) 
+that are much better equipped to talk with any sort of authority.
+
+## The Weapon
+---
+The main reason I picked up Stevie in the first place was to improve my aim.
+
+<ImageWithText 
+    src={stevieCardRef}
+    width={181}
+    height={262}
+    alt="A card of a golden pistol, with the labels 'Classic' and 'Start each round with the Golden Boira'"
+>
+
+    Stevie starts with the Golden Boira, which is a better version of the default weapon,
+    the Boira.
+
+    If you haven't played FvF, just know that the Boira is basically a Glock 9.
+</ImageWithText>
+
+The most important parts of the Golden Boira (to me, at least) are its much better accuracy
+and damage falloff[^1] stats, not to mention a higher damage output overall.
+The Golden only starts to lose damage at over 80 meters, while the default Boira starts losing damage at 35[^2].
+
+Of course, this only helps if you actually hit your shots, which was the whole point.
+Stevie really starts to shine when you synergize the cards with the gun.
+
+## The Deck 
+---
+My personal deck for Stevie[^3] has seen significant changes since I've started out, but I'll try my best to explain it.
+
+Most of the heavy lifting of my deck revolves around enhancing the Golden, because why not improve on something already great? 
+That's why **Steel Bullets**, **More Accuracy**, and **Quick Reload** make an appearance.
+
+The debuffs in my deck revolve around inconveniencing the other player, 
+like reducing their damage/accuracy and generally making them have worse of a time.
+
+The rest of the deck kind of revolve around getting out of bad situations, 
+like using **Teleport Bomb** or **Ninja Log** to make a quick getaway.
+
+I also make use of **Card Thief**, **Extra Cards**, and **Card Profaner** to get more into my hand, 
+just in case.
+
+## The Mindset
+---
+Because of Stevie's Golden Boira, you can afford to hang back a little more, as you'll get pretty much equivalent damage.
+This causes your opponents to try to close the distance, so using any tools you have against that will be vital (try **Land Mine**).
+
+If you're going to play more aggressively, make sure you take the appropriate measures 
+such as using health cards and evasion tactics. I'm a big fan of **Ninja Log** + **Medkit**.
+
+After all of that, just make sure you're practicing your aim and tracking skills. 
+Like I mentioned before, taking the better weapon doesn't help if you never hit anything.
+
+## In Conclusion
+---
+I may or may not follow this up with more specific information, like positions and matchups.
+I'll definitely have to do more research for that. 
+
+Thank you for taking the time to read this!
+
+<ImageWithText 
+    src={stevieZoomRef}
+    width={350}
+    height={350}
+    alt="A card of a golden pistol, with the labels 'Classic' and 'Start each round with the Golden Boira'"
+>
+A closer: why do they look so pissed in this image? I don't get it.
+</ImageWithText>
+
+---
+[^1]: Damage decreases over distance.
+[^2]: Sourced from <a href="/images/falloff_chart.png" target="blank">this image</a>.
+[^3]: Available <a href="https://3000-cooldotty-fvfdecks-q26oz8to8m6.ws-us115.gitpod.io/?deck=4.12.14.22.31.51.56.3.8.13.15.104.64.143.109.91.100.62.18.157.50.17.137.127.35.86.57.42" target="blank">here</a>.
