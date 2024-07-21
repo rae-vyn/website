@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import Headerjunk from "@components/headerjunk.astro";
-import dingoClean from "@images/dingo_clean.gif";
+import dingoCleanRef from "@images/dingo_clean.gif";
 ---
 <html>
     <head>
@@ -13,9 +13,8 @@ import dingoClean from "@images/dingo_clean.gif";
             <h1><strong>404</strong></h1>
             <h1>Whoops! How did you get here?</h1>
             <Image
-                src={dingoClean}
-                inferSize={true} 
-                alt="An anthropomorphic dingo sweeping" 
+                src={dingoCleanRef}
+                alt="An anthropomorphic dingo sweeping"
             />
             <p>Dingo's cleaning here, silly!</p>
             <p>You can <a href="/">head home</a> or watch him sweep.</p>
