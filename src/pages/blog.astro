@@ -13,8 +13,18 @@ const allPosts = await getCollection("posts");
 		<title>Blog Posts</title>	
 	</head>
 	<body>
+		<h1>Raevyn's Blog</h1>
         {
-            allPosts.map((post) => <Blogpost url={`/posts/${post.slug}`} title={post.data.title} date={post.data.pubDate.toISOString().slice(0,10)}/>)
+            allPosts
+				.map((post) =>
+					<Blogpost 
+						url={`/posts/${post.slug}`} 
+						title={post.data.title} 
+						date={post.data.pubDate.toISOString().slice(0,10)} 
+						desc={post.data.description}
+						tags={post.data.tags}
+					/>
+				)
         }
 	</body>
 </html>
