@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+import Headerjunk from "@components/headerjunk.astro";
+import dingoClean from "@images/dingo_clean.gif";
+---
+<html>
+    <head>
+        <Headerjunk />
+        <title>404</title>
+    </head>
+    <body>
+        <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+            <h1><strong>404</strong></h1>
+            <h1>Whoops! How did you get here?</h1>
+            <Image
+                src={dingoClean}
+                inferSize={true} 
+                alt="An anthropomorphic dingo sweeping" 
+            />
+            <p>Dingo's cleaning here, silly!</p>
+            <p>You can <a href="/">head home</a> or watch him sweep.</p>
+            <p>(Image credit goes to <strong>Demonic</strong> from <a href="https://discord.com/invite/RH5qcunBc6">Brainwashed</a>)</p>
+        </div>
+    </body>
+</html>

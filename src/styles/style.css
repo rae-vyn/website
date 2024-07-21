@@ -46,7 +46,8 @@ html {
     background-color: var(--r-black);
     color: white;
     font-size: 100%;
-    font-family: "Switzer"
+    font-family: "Switzer";
+    min-height: 100%;
 }
 
 body {
@@ -56,6 +57,7 @@ body {
     font-weight: regular;
     padding-left: 5%;
     padding-right: 5%;
+    width: auto;
 }
 
 body > p {
@@ -73,6 +75,16 @@ nav {
     align-items: center;
     padding: 0 5%;
 }
+
+/*footer {
+    border-top: 2px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    position: absolute;
+    bottom: 0;
+}*/
 
 a {
     font-weight: bold;
