@@ -1,9 +1,20 @@
 ---
 import { Image } from "astro:assets";
+import Plainlink from "@components/plainlink.astro";
 import raevynRef from "@images/eldrae_raedient.png"
 ---
 <nav>
+    <style>
+        div {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+        }
+    </style>
     <Image src={raevynRef} alt="A skeletal raven." width={99} height={110}/>
-    <p class="raevyn-logo" ><a href="/" style="text-decoration: none !important;">Raevyn's Site</a></p>
-    <p><a href="/blog" style="text-decoration: none !important;">Blog</a></p>
+    <Plainlink href="/" use_class="raevyn-logo">Raevyn's Site</Plainlink>
+    <div class="header-links">
+        <Plainlink href="/blog">Blog</Plainlink>
+        <Plainlink href="/#">About</Plainlink>
+    </div>
 </nav>

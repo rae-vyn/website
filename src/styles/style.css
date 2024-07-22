@@ -76,6 +76,11 @@ nav {
     padding: 0 5%;
 }
 
+.header-text {
+    display: flex;
+    flex-direction: row;
+}
+
 /*footer {
     border-top: 2px solid white;
     display: flex;
@@ -97,7 +102,7 @@ figcaption {
 }
 
 h2 {
-    margin-top: 5%;
+    margin-top: 3rem;
 }
 
 .image-with-text {

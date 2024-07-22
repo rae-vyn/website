@@ -1,0 +1,17 @@
+---
+import Footer from "./footer.astro";
+import Headerjunk from "./header-junk.astro";
+import Navbar from "./navbar.astro";
+const { title } = Astro.props;
+---
+<html lang="en">
+	<head>
+		<Headerjunk />
+		<Navbar />
+		<title>{title}</title>	
+	</head>
+	<body>
+		<slot />
+	</body>
+	<Footer />
+</html>
