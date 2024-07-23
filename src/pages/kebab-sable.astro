@@ -2,11 +2,15 @@
 import BaseNoNav from "@components/base-no-nav.astro";
 import ImageWithText from "@components/image-with-text.astro";
 import sableRef from "@images/sable_pirate.png";
+import propagandaRef from "@images/sable_propaganda.png";
 ---
 <BaseNoNav title="Kebab Haven">
-    <div style="display: flex; align-items: center; justify-content: center; height: 90vh;">
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 90vh;">
         <ImageWithText src={sableRef} width={512} height={512} alt="An anthropomorphic tiger in a pirate costume.">
             Here is Kebab Sable, also known as Kebable.
+        </ImageWithText>
+        <ImageWithText src={propagandaRef} inferSize={true} alt="A poster that reads 'SABLE NEEDS YOU' and 'YOU CAN BLOCK'">
+            Remember this! It will serve you well in your journey.
         </ImageWithText>
     </div>
 </BaseNoNav>
