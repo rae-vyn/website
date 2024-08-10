@@ -8,6 +8,9 @@ const allPosts = await getCollection("posts");
 	<h1>Raevyn's Blog</h1>
 	{
 		allPosts
+			.filter(post => {
+				return !post.data.tags.includes("_noindex");
+			})
 			.map((post) =>
 				<Blogpost 
 					url={`/posts/${post.slug}`} 

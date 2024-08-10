@@ -1,0 +1,83 @@
+/* register fonts*/
+@font-face {
+    font-family: "Switzer";
+    src: url('/fonts/Switzer-Variable.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Switzer";
+    src: url('/fonts/Switzer-VariableItalic.ttf');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Zodiak";
+    src: url('/fonts/Zodiak-Variable.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Zodiak";
+    src: url('/fonts/Zodiak-VariableItalic.ttf');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Libertinage";
+    src: url('/fonts/Libertinage.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Goudy Bookletter 1911";
+    src: url("/fonts/Goudy-Bookletter-1911.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Sports Mill Goudy";
+    src: url("/fonts/Sports-Mill-Goudy.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Sports Mill Goudy";
+    src: url("/fonts/Sports-Mill-Goudy-Italic.ttf");
+    font-style: italic;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "General Sans";
+    src: url("/fonts/GeneralSans-Variable.ttf");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "General Sans";
+    src: url("/fonts/GeneralSans-VariableItalic.ttf");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Sentient";
+    src: url("/fonts/Sentient-Variable.ttf");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Sentient";
+    src: url("/fonts/Sentient-VariableItalic.ttf");
+    font-style: italic;
+}

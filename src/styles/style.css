@@ -1,119 +1,61 @@
-/* register fonts*/
-@font-face {
-    font-family: "Switzer";
-    src: url('/fonts/Switzer-Variable.ttf');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
+@import "fonts.css";
 
-@font-face {
-    font-family: "Switzer";
-    src: url('/fonts/Switzer-VariableItalic.ttf');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
+/* Font List:
 
-@font-face {
-    font-family: "Zodiak";
-    src: url('/fonts/Zodiak-Variable.ttf');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
+- Switzer
+- Zodiak
+- Libertinage
+- Goudy Bookletter 1911
+- Sports Mill Goudy
+- General Sans
 
-@font-face {
-    font-family: "Zodiak";
-    src: url('/fonts/Zodiak-VariableItalic.ttf');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
+*/
 
-@font-face {
-    font-family: "Libertinage";
-    src: url('/fonts/Libertinage.ttf');
-    font-weight: normal;
-}
 :root {
     --r-black: #040207;
     --r-purple: #271e31;
     --r-light-purple: #caaeed;
     --r-lighter-purple: #eadefe;
 }
+
 html {
+    /* Fonts */
+    font-family: "Sentient";
+    font-size: 100%;
+    /* Colors */
     background-color: var(--r-black);
     color: white;
-    font-size: 100%;
-    font-family: "Switzer";
-    min-height: 100%;
 }
 
-body {
-    /*display: flex;
-    flex-direction: column;*/
-    font-family: "Libertinage";
-    font-weight: regular;
-    padding-left: 5%;
-    padding-right: 5%;
-    width: auto;
-}
-
-body > p {
-    font-size: 125%;
-}
-
-.raevyn-logo {
-    font-size: 150%
+a {
+    color: var(--r-lighter-purple);
+    font-weight: 500;
 }
 
 nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
     border-bottom: 2px solid white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5%;
 }
 
-.header-text {
-    display: flex;
-    flex-direction: row;
+.raevyn-logo {
+    font-size: 175%;
 }
 
-/*footer {
-    border-top: 2px solid white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5%;
-    position: absolute;
-    bottom: 0;
-}*/
-
-a {
-    font-weight: bold;
-    color: var(--r-light-purple);
-}
-
-figcaption {
-    font-style: italic;
-    color: var(--r-lighter-purple)
-}
-
-h2 {
-    margin-top: 3rem;
+.blogpost {
+    margin-top: 5%;
 }
 
 .image-with-text {
-    display: flex; 
-    flex-direction: row; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
 }
 
-@media screen and (max-width: 40rem) {
+@media screen and (max-width: 768px){
     .image-with-text {
-        flex-direction: column; 
-        justify-content: center;
+        flex-direction: column;
     }
 }

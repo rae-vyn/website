@@ -1,0 +1,48 @@
+---
+import { getCollection } from "astro:content";
+import Base from "@components/base.astro";
+import Blogpost from "@components/blogpost.astro";
+
+export async function getStaticPaths() {
+    const allPosts = await getCollection("posts");
+    let uniqueTags: string[] = [];
+
+    allPosts.forEach(post => {
+        post.data.tags.forEach((tag: string) => {
+            uniqueTags.push(tag);
+        });
+    });
+
+    let uniqueTagsSet = Array.from(new Set(uniqueTags));
+    
+    return uniqueTagsSet.map((tag) => {
+        const filteredPosts = allPosts.filter((post) => {
+            post.data.tags.includes(tag)
+        });
+        
+        return {
+            params: { tag },
+            props: { posts: filteredPosts }
+        };
+    });
+
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<Base>
+    <h1>Posts tagged with {tag}</h1>
+    { 
+        posts.map((post) => 
+            <Blogpost 
+				url={`/posts/${post.slug}`} 
+				title={post.data.title} 
+				date={post.data.pubDate.toISOString().slice(0,10)} 
+				desc={post.data.description}
+				tags={post.data.tags}
+			/>
+        )
+    }
+</Base>
