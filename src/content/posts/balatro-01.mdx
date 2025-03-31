@@ -1,0 +1,66 @@
+---
+title: "Modding Balatro 01: Making Jimbo"
+pubDate: 2025-03-31
+description: "Creating the most simple joker."
+tags: ["balatro"]
+---
+
+import ImageWithText  from "@components/image-with-text.astro";
+import ImageWithCaption  from "@components/image-with-caption.astro";
+
+> Note: This tutorial assumes you've already installed Steamodded and Lovely, and set up your mod's folder.
+> The mod DebugPlus is also recommended. It also assumes basic knowledge of Lua.
+
+Before you dive into making some complex, Cryptid-level Joker,
+we're going to start with the basics.
+
+The most basic joker in the game is just the Joker, which gives +4 Mult.
+What's nice about this is that you get to see a lot of parts of Jokers without doing too much complex work.
+
+Start by using `SMODS.Joker`:
+
+```lua {"1":2} {"2":5-7} {"3": 10} {"4": 13-15} {"5": 18-22}
+SMODS.Joker({
+    key = "joker_2",
+    loc_txt = {
+        name = "Joker 2",
+        text = {
+            "{C:mult}+#1#{} Mult"
+        }
+    }
+    loc_vars = function(self, info_queue, card)
+        return {vars = {card.ability.extra.mult}}
+    end
+    config = {
+        extra = {
+            mult = 4
+        }
+    },
+    calculate = function(self, context, card)
+        if context.joker_main then
+            return {
+                mult = card.ability.extra.mult
+            }
+        end
+    end
+})
+```
+
+To start, Section #1 is the _key_ of your joker. 
+This is part of how the code refers to your joker card.
+
+> This key is actually just a fraction of the full, internal key.<br/>
+In full, it's `j_[mod prefix]_key` (ex. `j_exmpl_joker_2`)
+
+In the `loc_txt` block, we define the `name` (self explanatory) of our joker.
+The `text` table (Section #2) is a list of strings, with each string representing one line.
+
+The `{C:mult}` part colors all the text before the closing `{}` will color the text red.
+
+<blockquote>
+There are other values you can use for `{C:}`, try these out:
+- attention
+- chips
+- tarot
+- planet
+</blockquote>

@@ -2,7 +2,8 @@
 const { url, title, date, desc, tags } = Astro.props;
 ---
 <div class="blogpost">
-    <h2>{title}: {date}</h2>
+    <h2>{title}</h2>
+    <p>{date}</p>
     <p>{desc}</p>
     <h4><a href={url}>Read here...</a></h4>
     <p>Tags: {tags.join(", ")}</p>

@@ -25,6 +25,26 @@ html {
     /* Colors */
     background-color: var(--r-black);
     color: white;
+    /* Padding */
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+blockquote {
+    background:rgba(234, 222, 254, 0.26);
+    border-left: 10px solid #fff;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+}
+blockquote:before {
+    color: #ccc;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+blockquote p {
+    display: inline;
 }
 
 a {
